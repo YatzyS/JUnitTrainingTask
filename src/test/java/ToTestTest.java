@@ -16,18 +16,41 @@ public class ToTestTest {
      *
      *
      */
+    ToTest tt;
+
     @Test
-    public void removeA() {
-        ToTest tt = new ToTest();
+    public void remove1() {
+        tt = new ToTest();
         String ans = tt.removeA("ABCD");
         assertEquals("BCD", ans);
-        ans = tt.removeA("AACD");
+    }
+
+    @Test
+    public void remove2() {
+        tt = new ToTest();
+        String ans = tt.removeA("AACD");
         assertEquals("CD", ans);
-        ans = tt.removeA("BACD");
+    }
+
+    @Test
+    public void remove3() {
+        tt = new ToTest();
+        String ans = tt.removeA("BACD");
         assertEquals("BCD", ans);
-        ans = tt.removeA("BBAA");
+    }
+
+    @Test
+    public void remove4() {
+        tt = new ToTest();
+        String ans = tt.removeA("BBAA");
         assertEquals("BBAA", ans);
-        ans = tt.removeA("AABAA");
+    }
+
+    @Test
+    public void remove5() {
+        tt = new ToTest();
+        String ans = tt.removeA("AABAA");
         assertEquals("BAA", ans);
     }
+
 }
